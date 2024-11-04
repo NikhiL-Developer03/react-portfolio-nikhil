@@ -1,6 +1,6 @@
 import React from "react";
 import { HERO_CONTENT } from "../constants";
-import profilePic from "../assets/Profile1.png";
+import profilePic from "../assets/Profile1.webp";
 import { motion } from "framer-motion";
 
 const container = (delay) => ({
@@ -48,6 +48,7 @@ const Hero = () => {
             initial={{x:100,opacity:0}}
             animate={{x:0,opacity:1}}
             transition={{duration:1,delay:1.2}}
+            className=" rounded-lg "
             src={profilePic} alt="ProfilePic" />
           </div>
         </div>
