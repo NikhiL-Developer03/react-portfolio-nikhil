@@ -9,33 +9,19 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
+    year: "Jan 2024 - Mar 2024",
+    role: "SOFTWARE TRAINEE",
+    company: "Himank Soft Solution",
+    description: `My responsibilities during the internship included designing and developing smooth, responsive components. I collaborated on front-end designs and optimized the website to enhance user experience and performance. Additionally, I improved website loading speed by optimizing ReactJS and JavaScript performance.`,
+    technologies: ["ReactJS", "JavaScript", "HTML", "CSS", "MongoDB"],
+},
+{
+  year: "Apr 2024 - Jun 2024",
+  role: "CLOUD ENGINEER (Remote)",
+  company: "GTrusty Cloud Private Limited",
+  description: `Managed DNS and MX configurations for over 25 domains, reducing email delivery issues by 50%. Configured Google Workspace for 10+ clients, enhancing team productivity by 30%. Administered 500+ user accounts through the G Suite Admin Console, maintaining full compliance with access policies. Successfully migrated over 100GB of data to Google Workspace with less than 2 hours of downtime.`,
+  technologies: ["GAM", "GAMMO", "GASMO", "GWMME", "SysTool"],
+},
 ];
 
 export const PROJECTS = [
