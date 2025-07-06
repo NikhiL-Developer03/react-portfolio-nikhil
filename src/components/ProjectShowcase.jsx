@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+// Import project images
+import project1 from "../assets/projects/project-1.jpg";
+import project2 from "../assets/projects/project-2.jpg";
+import project3 from "../assets/projects/project-3.jpg";
+import project4 from "../assets/projects/project-4.jpg";
+
 const ProjectShowcase = () => {
   const [selectedProject, setSelectedProject] = useState(0);
   
@@ -12,7 +18,7 @@ const ProjectShowcase = () => {
       subtitle: "Advanced Todo Application",
       description: "A sophisticated task management application with priority levels, due dates, and advanced filtering. Features dark theme, local storage persistence, and intuitive user interface.",
       longDescription: "Built with React and modern hooks, this application showcases advanced state management using Context API. Features include drag-and-drop functionality, priority-based color coding, due date notifications, and comprehensive filtering options. The application uses Tailwind CSS for responsive design and Framer Motion for smooth animations.",
-      image: "/src/assets/projects/project-1.jpg",
+      image: project1,
       technologies: ["React", "Context API", "Tailwind CSS", "Local Storage", "Framer Motion"],
       features: [
         "Priority-based task management",
@@ -33,7 +39,7 @@ const ProjectShowcase = () => {
       subtitle: "Smart Expense Management",
       description: "A comprehensive financial tracking application that helps users monitor expenses, set budgets, and analyze spending patterns with interactive charts and reports.",
       longDescription: "Full-stack application built with React frontend and Node.js backend. Features include expense categorization, budget planning, financial goal tracking, and detailed analytics. Uses Chart.js for data visualization and MongoDB for data persistence.",
-      image: "/src/assets/projects/project-2.jpg",
+      image: project2,
       technologies: ["React", "Node.js", "Express", "MongoDB", "Chart.js", "JWT"],
       features: [
         "Expense tracking and categorization",
@@ -54,7 +60,7 @@ const ProjectShowcase = () => {
       subtitle: "Event Management System",
       description: "A comprehensive platform for creating, managing, and attending events. Features event registration, attendee management, and real-time updates.",
       longDescription: "Built with Next.js and TypeScript for type safety and performance. Integrates with external APIs for payment processing and email notifications. Features server-side rendering for optimal SEO and user experience.",
-      image: "/src/assets/projects/project-3.jpg",
+      image: project3,
       technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
       features: [
         "Event creation and management",
@@ -75,7 +81,7 @@ const ProjectShowcase = () => {
       subtitle: "Educational Institution Portal",
       description: "A modern educational website with responsive design, featuring school information, departments, faculty profiles, and administrative tools.",
       longDescription: "Server-side rendered application using Express.js and Handlebars. Features content management system for easy updates, contact forms, and dynamic routing for different school sections.",
-      image: "/src/assets/projects/project-4.jpg",
+      image: project4,
       technologies: ["Node.js", "Express", "Handlebars", "MongoDB", "Bootstrap"],
       features: [
         "Responsive institutional design",
