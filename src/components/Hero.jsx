@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HERO_CONTENT } from "../constants";
-import profilePic from "../assets/Profile1.webp";
+import profilePic from "../assets/Nikhil.webp";
 import { motion } from "framer-motion";
 import { FaDownload, FaCode, FaRocket } from "react-icons/fa";
 
