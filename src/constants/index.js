@@ -3,25 +3,25 @@ import financeTrackerImg from "../assets/projects/project-2.jpg";
 import eventPlatformImg from "../assets/projects/project-3.jpg";
 import schoolWebsiteImg from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `Passionate full stack developer crafting scalable web applications with React, Next.js, Node.js, and modern databases. I create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `Dedicated full stack developer passionate about creating efficient, user-friendly web applications. Experienced with React, Next.js, Node.js, MySQL, and MongoDB. I thrive in collaborative environments, enjoy solving complex problems, and continuously explore new technologies to deliver high-quality solutions.`;
 
 export const EXPERIENCES = [
   {
+    year: "Apr 2024 - Jun 2024",
+    role: "CLOUD ENGINEER",
+    company: "GTrusty Cloud Private Limited",
+    description: `Led cloud infrastructure management for enterprise clients, managing DNS and MX configurations across 25+ domains while reducing email delivery issues by 50%. Spearheaded Google Workspace implementation for 10+ organizations, resulting in 30% productivity improvement. Administered 500+ user accounts through G Suite Admin Console, ensuring 100% compliance with security policies. Successfully executed data migration projects exceeding 100GB with minimal downtime (<2 hours).`,
+    technologies: ["Google Workspace", "DNS Management", "GAM", "GAMMO", "GASMO", "GWMME", "SysTool"],
+  },
+  {
     year: "Jan 2024 - Mar 2024",
-    role: "SOFTWARE TRAINEE",
+    role: "SOFTWARE DEVELOPMENT TRAINEE",
     company: "Himank Soft Solution",
-    description: `My responsibilities during the internship included designing and developing smooth, responsive components. I collaborated on front-end designs and optimized the website to enhance user experience and performance. Additionally, I improved website loading speed by optimizing ReactJS and JavaScript performance.`,
-    technologies: ["ReactJS", "JavaScript", "HTML", "CSS", "MongoDB"],
-},
-{
-  year: "Apr 2024 - Jun 2024",
-  role: "CLOUD ENGINEER (Remote)",
-  company: "GTrusty Cloud Private Limited",
-  description: `Managed DNS and MX configurations for over 25 domains, reducing email delivery issues by 50%. Configured Google Workspace for 10+ clients, enhancing team productivity by 30%. Administered 500+ user accounts through the G Suite Admin Console, maintaining full compliance with access policies. Successfully migrated over 100GB of data to Google Workspace with less than 2 hours of downtime.`,
-  technologies: ["GAM", "GAMMO", "GASMO", "GWMME", "SysTool"],
-},
+    description: `Developed responsive web components using modern React patterns and best practices. Collaborated with senior developers on front-end architecture and design system implementation. Optimized application performance through code splitting and efficient state management, achieving 25% improvement in loading speeds. Gained hands-on experience with full-stack development including database design and API integration.`,
+    technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "MongoDB", "REST APIs"],
+  },
 ];
 
 export const PROJECTS = [
