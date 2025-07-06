@@ -1,7 +1,7 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import taskManagerImg from "../assets/projects/project-1.jpg";
+import financeTrackerImg from "../assets/projects/project-2.jpg";
+import eventPlatformImg from "../assets/projects/project-3.jpg";
+import schoolWebsiteImg from "../assets/projects/project-4.jpg";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -26,32 +26,32 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
-    image: project1,
+    title: "Task Manager App",
+    image: taskManagerImg,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "A modern todo application with priority management, due dates, and local storage persistence. Features task filtering by status and priority with a beautiful dark theme UI.",
+    technologies: ["React", "Vite", "Tailwind CSS", "Context API", "Local Storage"],
   },
   {
-    title: "Task Management App",
-    image: project2,
+    title: "Personal Finance Tracker Plus",
+    image: financeTrackerImg,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "A full-stack web application for tracking daily expenses, setting monthly budgets, and viewing financial reports to understand spending patterns.",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Chart.js"],
   },
   {
-    title: "Portfolio Website",
-    image: project3,
+    title: "Event Platform",
+    image: eventPlatformImg,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "A comprehensive event management platform for creating, organizing, and managing events. Features event registration, attendee management, and real-time updates.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
   },
   {
-    title: "Blogging Platform",
-    image: project4,
+    title: "Genius School Website",
+    image: schoolWebsiteImg,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "A modern educational institution website with responsive design, featuring school information, departments, faculty, and contact management system.",
+    technologies: ["Node.js", "Express", "Handlebars", "MongoDB", "Bootstrap"],
   },
 ];
 
