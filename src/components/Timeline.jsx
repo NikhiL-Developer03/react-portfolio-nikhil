@@ -145,111 +145,165 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="border-b border-neutral-900 pb-24">
-      <motion.h1
+    <div className="border-b border-neutral-900 pb-12 sm:pb-16 lg:pb-20">
+      <motion.div
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
+        initial={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-8 sm:mb-10 lg:mb-12"
       >
-        Professional Journey
-      </motion.h1>
+        <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6">
+          Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">Journey</span>
+        </h1>
+        <p className="text-neutral-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
+          Explore my career path, educational background, and professional achievements that have shaped my expertise.
+        </p>
+      </motion.div>
 
 
-      <div className="flex justify-center mb-12">
-        <div className="bg-neutral-900/50 rounded-lg p-1 border border-neutral-700">
-          {tabs.map((tab) => {
-            const IconComponent = tab.icon;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-md transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? "bg-purple-600 text-white"
-                    : "text-neutral-400 hover:text-white hover:bg-neutral-800"
-                }`}
-              >
-                <IconComponent className="w-4 h-4" />
-                <span>{tab.label}</span>
-              </button>
-            );
-          })}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center mb-6 sm:mb-8">
+          <motion.div 
+            className="flex space-x-1 bg-neutral-900/90 backdrop-blur-xl rounded-full p-1 border border-neutral-700/60 shadow-2xl shadow-purple-900/20"
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {tabs.map((tab) => {
+              const IconComponent = tab.icon;
+              return (
+                <motion.button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 ${
+                    activeTab === tab.id
+                      ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/30"
+                      : "text-neutral-400 hover:text-white hover:bg-neutral-800/50"
+                  }`}
+                >
+                  <IconComponent className="w-4 h-4" />
+                  <span className="text-sm sm:text-base font-medium">{tab.label}</span>
+                </motion.button>
+              );
+            })}
+          </motion.div>
         </div>
-      </div>
 
 
-      <div className="max-w-4xl mx-auto px-4">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="relative"
-        >
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 backdrop-blur-xl border border-neutral-700/50 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-purple-900/10"
+          >
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500"></div>
 
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-transparent"></div>
+            {getCurrentData().map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative flex items-start mb-8 last:mb-0"
+              >
+                {/* Icon Circle */}
+                <motion.div 
+                  className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-neutral-800 to-neutral-900 border-2 border-neutral-600/50 rounded-full flex items-center justify-center mr-6 z-10 shadow-lg"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {getIcon(item.type)}
+                </motion.div>
 
-          {getCurrentData().map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative flex items-start mb-12"
-            >
-
-              <div className="flex-shrink-0 w-16 h-16 bg-neutral-800 border-2 border-neutral-700 rounded-full flex items-center justify-center mr-6 z-10">
-                {getIcon(item.type)}
-              </div>
-
-
-              <div className="flex-1 bg-neutral-900/50 backdrop-blur-sm rounded-lg p-6 border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{item.role}</h3>
-                    <p className="text-purple-400 font-medium">{item.company}</p>
-                  </div>
-                  <span className="bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full text-sm">
-                    {item.year}
-                  </span>
-                </div>
-
-                <p className="text-neutral-300 mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-
-
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-neutral-400 mb-2">Technologies & Skills</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {item.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-neutral-800 text-purple-300 rounded text-xs border border-neutral-700"
+                {/* Content Card */}
+                <motion.div 
+                  className="flex-1 bg-neutral-800/60 backdrop-blur-sm rounded-xl p-6 border border-neutral-600/40 hover:border-purple-500/50 transition-all duration-300 shadow-lg"
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
+                    <div>
+                      <motion.h3 
+                        className="text-xl sm:text-2xl font-bold text-white mb-1"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        {item.role}
+                      </motion.h3>
+                      <motion.p 
+                        className="text-purple-400 font-semibold text-lg"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        {item.company}
+                      </motion.p>
+                    </div>
+                    <motion.span 
+                      className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 text-purple-300 px-3 py-1.5 rounded-full text-sm font-medium border border-purple-500/40 backdrop-blur-sm"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {item.year}
+                    </motion.span>
                   </div>
-                </div>
 
+                  <motion.p 
+                    className="text-neutral-300 mb-6 leading-relaxed"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    {item.description}
+                  </motion.p>
 
-                <div>
-                  <h4 className="text-sm font-semibold text-neutral-400 mb-2">Key Achievements</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {item.achievements.map((achievement, achIndex) => (
-                      <div key={achIndex} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-500 rounded-full flex-shrink-0"></div>
-                        <span className="text-neutral-300 text-sm">{achievement}</span>
-                      </div>
-                    ))}
+                  {/* Technologies */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-neutral-400 mb-3">Technologies & Skills</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {item.technologies.map((tech, techIndex) => (
+                        <motion.span
+                          key={techIndex}
+                          className="px-2.5 py-1.5 bg-neutral-800/80 text-purple-300 rounded-full text-xs border border-neutral-600/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300"
+                          whileHover={{ scale: 1.05 }}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.5 + techIndex * 0.05 }}
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+
+                  {/* Achievements */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-neutral-400 mb-3">Key Achievements</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      {item.achievements.map((achievement, achIndex) => (
+                        <motion.div 
+                          key={achIndex} 
+                          className="flex items-center space-x-3"
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.6 + achIndex * 0.1 }}
+                        >
+                          <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-neutral-300 text-sm">{achievement}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );
